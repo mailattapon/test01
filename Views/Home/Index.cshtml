@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<script type="text/javascript">
+    sLeaveDateFrom = '@Session["otDateFrom"]';
+    sLeaveDateTo = '@Session["otDateTo"]';
+    sError = '@Session["error"]';
+
+    urlGet = '@Url.Action("getData", "Home")';
+    urlClickAdd = '@Url.Action("clickAdd", "Home")';
+    urlClickEdit = '@Url.Action("clickComplete", "Home")';
+    urlClickDelete = '@Url.Action("clickDelete", "Home")';
+    urlClickClear = '@Url.Action("clickClear", "Home")';
+
+    urlPrintExcel = '@Url.Action("printExcel", "Home")';
+    urlclickImport = '@Url.Action("clickImport", "Home")';
+</script>
+
+<div class="row">
+    <div class="col-xl-12 mb-30">
+        <div class="card-box  widget-style1">
+            <h4 class="mb-4 mt-1 modal-title">Test</h4>
+            <div class="flex-wrap align-items-center" style="max-width:100%;">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" placeholder="Input Data" id="txtInput">
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="button" class="btn btn-info" onclick="clickAdd()">Add</button>
+                    </div>
+                    <div class="col-sm-6">
+                        
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-sm-2">
+                        <button type="button" class="btn btn-info" onclick="clickPrint()">Print Excel</button>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <input type="file" id="myFile" >
+                        <button type="button" class="btn btn-info" onclick="clickImport()">Import</button>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <button type="button" class="btn btn-danger" onclick="clickClear()">Clear Data</button>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                </div>
+                <br />
+                <table class="data-table table dataTables_scroll stripe  nowrap " id="table1">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Data</th>
+                            <th>Date Time</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableData">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/home/indexJS.js"></script>

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/mazer-main/dist/assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="~/mazer-main/dist/assets/vendors/simple-datatables/style.css">
+    <link rel="stylesheet" href="~/mazer-main/dist/assets/vendors/fontawesome/all.min.css">
+    <style>
+
+        table {
+            white-space: nowrap;
+        }
+    </style>
+
+    <link rel="stylesheet" href="~/mazer-main/dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="~/mazer-main/dist/assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/mazer-main/dist/assets/css/app.css">
+    <link rel="shortcut icon" href="~/mazer-main/dist/assets/images/favicon.svg" type="image/x-icon">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+        </div>
+    </nav>
+    <br />
+    <br />
+    <div class="container body-content" style="background-color:white;">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    <script src="~/mazer-main/dist/assets/vendors/jquery/jquery.min.js"></script>
+    <script src="~/mazer-main/dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+    <script src="~/mazer-main/dist/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/mazer-main/dist/assets/js/pages/horizontal-layout.js"></script>
+
+    <script src="~/mazer-main/dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+    <script src="~/mazer-main/dist/assets/vendors/simple-datatables/simple-datatables.js"></script>
+    <script src="~/mazer-main/dist/assets/vendors/fontawesome/all.min.js"></script>
+
+    <script src="~/mazer-main/dist/assets/js/mazer.js"></script>
+</body>
+</html>
