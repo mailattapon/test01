@@ -105,11 +105,11 @@ function getTable() {
                 }
             });
 
-            $("#tableData").empty();
-            $("#tableData").append(optionhtml);
-
             let table1 = document.querySelector('#table1');
             let dataTable = new simpleDatatables.DataTable(table1);
+
+            $("#tableData").empty();
+            $("#tableData").append(optionhtml);
         },
         error: function (err) {
             console.log(err.responseText);
